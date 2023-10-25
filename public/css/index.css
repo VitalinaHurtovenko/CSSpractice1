@@ -1,139 +1,69 @@
-*{
-    color: black;
+/* .card > p {
+    color: #6595ed;
+} */
+
+/* .card > p {
+    color: rgb(248, 67, 211);
+} */
+
+/* .card > p {
+    color: rgba(215, 43, 68, 0.5);
+} */
+
+/* .card > p {
+    color: rgb(13, 168, 150);
+} */
+
+/* .card > p {
+    color: rgb(13, 168, 150);
+    -webkit-text-fill-color: rgb(0, 123, 255);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+} */
+
+/* .card > p {
+    color:initial;
+} */
+
+/* .card{
+    color: rgb(13, 168, 150);
 }
 
-:root{
-background: white;
-}
+p{
+    color: inherit;
+} */
 
-h1 {
-    background: blue;
-}
+/* .card > p {
+    color: rgb(13, 168, 150)none;
+} */
 
-.green {
-    background: green;
-}
+/* .card > .right{
+    color: rgb(13, 168, 150)none;
+    writing-mode: vertical-lr;
+} */
 
-#blue {
-    background: blue;
-}
+ /* .card > p{
+    color: rgb(13, 168, 150);
+    text-align: justify;
+    height: 120px;
+    width: 120px;
+} */
 
-.box {
-    background: green;
-}
+ /* .card > p{
+    color: rgb(13, 168, 150);
+    text-transform: uppercase;
+    tab-size: 10px;
+} */
 
-.box p {
-    background: black;
-}
+/* .card > p{
+    color: rgb(13, 168, 150);
+    letter-spacing: 0.2em;
+} */
 
-.brown {
-    background: brown;
-    color: white;
-}
+/* .card > p{
+    color: rgb(13, 168, 150);
+    text-decoration: solid overline blue;
+} */
 
-ul > li {
-    background: red;
-}
-
-.header-button + span {
-    background: red;
-}
-
-.susid ~ p {
-    background: blue;
-}
-
-.salo, #bread {
-    background: yellow;
-}
-
-.first-task li:first-child {
-    color: white;
-}
-
-.second-task ul:first-child li:first-child {
-    background: yellow;
-}
-
-.third-task ul:last-child li:first-child {
-    background: yellow;
-}
-
-.four-task li:last-child {
-background: yellow;
-}
-
-.five-task ul:last-child li:last-child {
-color: white;
-}
-
-.only-child-task div:only-child{
-    color: red;
-}
-
-.seven-task p:first-of-type{
-    background: red;
-}
-
-.eight-task p:last-of-type {
-    background: red;
-}
-
-.nine-task div p:only-of-type {
-    background: yellow;
-}
-
-.lesson-three-task-one a[href]{
-    color: white;
-}
-
-.lesson-three-task-two li[value]{
-    color: yellow;
-}
-
-.lesson-three-task-three li[value="3"]{
-    background: red;
-}
-
-.lesson-three-task-four button[class~=primary]{
-    background: blue;
-}
-
-.lesson-three-task-five button[class|=secondary]{
-    background: red;
-}
-
-.lesson-three-task-six li[class^=b]{
-    background: green;
-    color: white;
-}
-
-.lesson-three-task-seven li[class*=on]{
-    background: green;
-    color: white;
-}
-
-.lesson-three-task-eight span[class$=s]{
-    background: blue;
-    color: white;
-}
-
-.lesson-three-task-nine h2::first-letter{
-    background: red ;
-}
-
-.lesson-three-task-ten p::first-line {
-    background-color: yellow;
-  }
-
-.lesson-three-task-eleven input::placeholder{
-    background: red;
-}
-
-.lesson-three-task-twelve ul li::before {
-    content: "➤";
-}
-
-.lesson-three-task-thirteen ul li::after{
-    content: "➤";
-}
+/* .card > p{
+    color: rgb(13, 168, 150);
+} */
