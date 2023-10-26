@@ -67,3 +67,10 @@ p{
 /* .card > p{
     color: rgb(13, 168, 150);
 } */
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-size: xx-large;
+    font-weight: 1000;
+    font-display: swap;
+}
