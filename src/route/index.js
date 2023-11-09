@@ -126,7 +126,7 @@ router.get('/template-1', function (req, res) {
         links: [
           {
             text: 'Team',
-            url: 'https://example.com/team',
+            url: 'https://example.com/team', 
           },
           {
             text: 'Locations',
