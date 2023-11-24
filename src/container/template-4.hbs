@@ -1,106 +1,61 @@
-  <div class='page_content'> 
-    {{!-- Header --}}
-    <header class='page_block'>
-      <div class='header row g-0'>
-        <div class="col-3">
-          {{> logo}}
-        </div>
-        <nav class='nav col-9'>
-          <div class='header_nav_right'>
-            {{>nav list=header}}
-          </div>
-        </nav>
-      </div>
-    </header>
+{{!-- Header --}}
 
-    {{!-- Hero --}}
-    <section class="page_block">
-      <div class='page_block_hero'>
-        <div class="hero">
-          {{#with hero}}
-            {{> hero title=title text=text}}
-            
-            <a class="button" href="{{button.url}}">{{button.text}}</a>
-          {{/with}}
-        </div>
-      </div>
-    </section>
+<header class='header'>
+	<div class="logo">
+		{{> logo}}
+	</div>
 
-    {{!-- Preview --}}
-    <section class="page_block">
-      <main class="flex_conteiner">
-        {{#each preview}}
-        <div class="flex_item">
-          {{> CardPreview data=this}}
-        </div>
-        {{/each}}
-      </main>
-    </section>
+	<nav class='header_nav'>
+		<div class='header_nav_right'>
+			{{>nav list=header}}
+		</div>
+	</nav>
+</header>
 
-    {{!-- List of posts --}}
-    <main class="page_block">
-      <div class="main">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="list_header">
-              <div class="row g-0">
-                <div class="col-6">
-                  <h2 class="list_title">List of posts</h2>
-                </div>
-                <div class="col-6 navs">
-                  {{#each categories}}
-                    <button class="category_button">{{text}}</button>
-                  {{/each}}
-                </div>
-              </div> 
-            </div>
-          </div>
-          
-          <div class="col-7">
-            <div class="list">
-              {{#each news}}
-                {{> cardPost data=this}}
-              {{/each}}
-            
-            </div>
-          </div>
+<div class="hero">
+	{{#with main}}
 
-          <div class="col-5">
-            <aside class="list_aside">
-              <div class="about_card">
-                <div class="about">
-                  <div class="about_title">About</div>
-                  <div class="about_text">{{about}}</div>
-                </div>
-              </div>
-                {{> linkList data=archive title="Archives"}}
+		<div class="hero_content">
+			<h1 class="hero_title">{{heading}}</h1>
+			<p class="hero_text">{{description}}</p>
+			<a href="{{href}}" class="main_button">{{button}}</a>
+		</div>
+		<img src="{{image}}" alt="Main image" class="hero_img">
 
-                {{> linkList data=social title="Social"}}
-            </aside>
-          </div>
-        </div>
-      </div>
-      
-        
-    </main>
+	{{/with}}
+</div>
 
-    {{!-- Footer --}}
-    <footer class="page_block">
-      <div class="row g-0 footer">
-        <div class="col-3">
-          {{> logo}}
-          <span class="footer_copyright">Copyright 2023</span>
-        </div>
+<main class="blog">
+	{{#each featured}}
+		{{> cardBlog4 data=this}}
+	{{/each}}
+</main>
+<div class="form4">
+	{{#each actions}}
+		
+			<div class="form_content4">
+				<h3 class="form_title4">{{heading}}</h3>
+				<a href="{{url}}" class="form_button4">{{text}}</a>
+			</div>
+		
+	{{/each}}
+</div>
 
-        {{#each footer}}
-          <div class="col-3">
-            <span class="footer_title">
-              {{title}}
-            </span>
-            {{> nav list=links isVertical=true}}
-          </div>
-        {{/each}}
+{{!-- Footer --}}
+<footer class="footer">
+	<div>
+		{{> logo}}
+		<span class="footer_copyright">© 2023</span>
+	</div>
 
-      </div>
-    </footer>
-  </div>
+	{{#each footer}}
+		<div>
+			<span class="footer_title">{{title}}</span>
+			{{> nav list=links isVertical=true}}
+		</div>
+	{{/each}}
+
+</footer>
+
+
+
