@@ -2,7 +2,7 @@
 
 <header class='header'>
 	<div class="logo">
-		{{> logo}}
+		<a href="#test">{{> logo}}</a> 
 	</div>
 
 	<nav class='header_nav'>
@@ -12,6 +12,8 @@
 	</nav>
 </header>
 
+
+
 <div class="hero">
 	{{#with hero}}
 
@@ -19,9 +21,21 @@
 			<h1 class="hero_title">{{title}}</h1>
 			<p class="hero_text">{{text}}</p>
 		</div>
-		<img src="{{photo}}" alt="Hero image" class="hero_img">
 
+		<div class="hero_slider">
+			<div class="hero_slider"><img src="{{photo}}" alt="Hero image" class="hero_img"></div>
+			<div class="hero_slider_icon hero_slider_left">{{left}}</div>
+			<div class="hero_slider_icon hero_slider_right">{{right}}</div>
+		</div>
 	{{/with}}
+</div>
+
+<input type="text" class="input">
+
+<div class="modal">
+	<img src="{{hero.photo}}" alt="Hero image" class="modal_image">
+	<div class="modal_text">{{hero.text}} <br> Sdo dsovnzfjobv os jdb vj d dfisd fsj dfsjd fsd flsjd flsdjk fdjfsdjf dsf sd f sdfisbdifbsid fsd
+	 fuhw fheu fh wheu fweu fhuwe hfuwe fuwehfuiwehf uawheufa hweufa   bhfhsbfdhbfsdhbf sd fhbsd hfbs hfs dh bf shd bif hbsduhjbvosjfb dsjb vsdoj vsdjv dojv sd;vjs v</div>
 </div>
 
 <main class="blog">
@@ -29,6 +43,8 @@
 		{{> cardBlog data=this}}
 	{{/each}}
 </main>
+
+
 
 {{#with form}}
 	<div class="form">
@@ -44,7 +60,7 @@
 
 
 {{!-- Footer --}}
-<footer class="footer">
+<footer class="footer" id="test">
 	<div>
 		{{> logo}}
 		<span class="footer_copyright">Copyright 2023</span>
