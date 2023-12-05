@@ -1,0 +1,100 @@
+{{!-- Header --}}
+
+<header class='header'>
+	<div class="logo">
+		{{> logo}}
+	</div>
+
+	<nav class='header_nav'>
+		<div class='header_nav_right'>
+			{{>nav list=header}}
+		</div>
+	</nav>
+</header>
+
+<main class="main">
+	<div class="info">
+		{{#with info}}
+			<h1 class="info_title">{{title}}</h1>
+			<p class="info_description">{{description}}</p>
+		{{/with}}
+	</div>
+
+	<div class="form">
+		{{#with form}}
+		
+			<h2 class="form_title">{{title}}</h2>
+			<div class="form_input_list">
+				{{#each inputs}}
+					<input type="{{type}}" placeholder="{{placeholder}}" id="form-input-{{id}}" name="{{name}}" class="form_input">
+				{{/each}}
+			</div>
+
+			<div class="form_checkbox">
+				<input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+				<div></div>
+				<label class="form_label" for="{{checkbox.name}}">{{checkbox.label}}</label>
+			</div>
+
+			<button class="form_button">{{button}}</button>
+			<p class="form_info">{{info}}</p>
+		
+		{{/with}}
+	</div>
+</main>
+
+<div class="updates">
+	{{#with updates}}
+		<h6 class="updates_title">{{title}}</h6>
+		<div class="list">
+			{{#each list}}
+				<div class="list_block">
+					<div class="list_img"><img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzY2NTB8MHwxfHNlYXJjaHwzfHxyYW5kb218ZW58MHx8fHwxNzAxNzMyMDA1fDA&ixlib=rb-4.0.3&q=85&w=32&h=32&fit=crop" alt="account photo"></div>
+					<div class="media">
+						<strong class="list_nickname"><span>@</span>{{nickname}}</strong>
+						<p class="list_description">{{description}}</p>
+					</div>
+				</div>
+			{{/each}}
+
+			<a href="{{show_all.url}}" class="list_link">{{show_all.text}}</a>
+		</div>
+	{{/with}}
+</div>
+
+<div class="expirience">
+	{{#with expirience}}
+		<div class="expirience_badge">{{badge}}</div>
+		<div class="expirience_title">{{title}}</div>
+		<div class="feedback_block">
+			{{#each list}}
+				<div class="feedback">
+					<div class="feedback_name">{{name}}</div>
+					<p class="feedback_details">{{details}}</p>
+				</div>
+			{{/each}}
+		</div>
+	{{/with}}
+</div>
+
+
+
+
+{{!-- Footer --}}
+<footer class="footer">
+	<div>
+		{{> logo}}
+		<span class="footer_copyright">© 2023</span>
+	</div>
+
+	{{#each footer}}
+		<div>
+			<span class="footer_title">{{title}}</span>
+			{{> nav list=links isVertical=true}}
+		</div>
+	{{/each}}
+
+</footer>
+
+
+
