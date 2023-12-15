@@ -1,255 +1,158 @@
-:root {
-    --text-color: rgb(211, 0, 190);
-    --space-medium: 24px;
-}
+@import '/css/var.css';
 
-.page{
-    background: #ffffff;
-    padding: 0 15px;
-    line-height: 1.5;
-}
+.hero_title {
+  font-size: 56px;
+  color: var(--text-color, #212529);
+  font-weight: 500;
 
-.page_content {
-    max-width: 960px;
-    margin: 0 auto; 
-    background: #f6f6f6;
-}
+  text-align: center;
 
-.header{
-    padding: var(--space-medium);
-    border-bottom: 1px solid #cecfd0 ;
-}
-
-.logo{
-    font-size: var(--space-medium);
-}
-
-.divider {
-    margin: 0;
-    height: 1px;
-    background-color: #DEE2E6;
-}
-
-.nav {
-    display: block;
-}
-
-.nav_link {
-    color: #343A40;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.nav_link:hover {
-    text-decoration: underline;
-    opacity: 50%;
-}
-
-
-
-.nav_inline > .nav_link:not(:last-child) {
-    display: inline;
-    margin-right: var(--space-medium);
-}
-
-.nav_vertical > .nav_link:not(:last-child) {
-    display: block;
-    margin-bottom: 12px;
-    color: #6C757D;
-}
-
-.header_nav_right {
-    margin-left: auto;
-    width: fit-content;
-}
-
-.page_block:not(:last-of-type) {
-    margin-bottom: 80px;
-}
-
-.footer {
-    padding: var(--space-medium) 0;
-    border-top: 1px solid #cecfd0;
-}
-
-.footer_copyright {
-    font-size: 14px;
-    color: #6c757d;
-
-    display: block;
-
-    margin-top: 12px;
-}
-
-.footer_title {
-    font-size: 20px;
-    color: var(--text-color, #212529);
-
-    display: block;
-
-    margin-bottom: 12px;
-}
-
-.hero_title{
-    font-size: 56px;
-    color: var(--text-color, #212529);
-    font-weight: 500;
-
-    text-align: center;
-
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .hero_text {
-    color: var(--text-color, #212529);
-    height: 500px;
-    font-size: 20px; 
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    word-spacing:3px;
-    background-image: url(/img/test2.png);
-    background-attachment: fixed;
-    
+  color: var(--text-color, #212529);
+  height: 500px;
+  font-size: 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  word-spacing: 3px;
+  background-image: url(/img/test2.png);
+  background-attachment: fixed;
 }
 
 .plans {
- text-align: center;
+  text-align: center;
 }
 
 .plans_card:not(:last-of-type) {
-    margin-right: var(--space-medium);
+  margin-right: var(--space-medium);
 }
 
 .plans_card:nth-child(2) {
-   
 }
 
 .card {
-    border:1px solid var(--text-color, #212529);
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px 0px #c2c3c5;
-    cursor: move;
-
+  border: 1px solid var(--text-color, #212529);
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 0px #c2c3c5;
+  cursor: move;
 }
 
 .card:hover {
-    outline: 3px solid #4e7fe2;
-    text-shadow: 5px 5px 5px #c2c3c5;
-    opacity: 77%;
-
+  outline: 3px solid #4e7fe2;
+  text-shadow: 5px 5px 5px #c2c3c5;
+  opacity: 77%;
 }
 
-
 .btn {
-    box-shadow: 5px 5px 5px 0px #c2c3c5;
+  box-shadow: 5px 5px 5px 0px #c2c3c5;
 }
 
 .card-header {
-    padding: 12px;
-    font-size: var(--space-medium);
-    color: var(--text-color, #212529);
-
+  padding: 12px;
+  font-size: var(--space-medium);
+  color: var(--text-color, #212529);
 }
 
 .card-body {
-    padding: var(--space-medium);
+  padding: var(--space-medium);
 }
 
-.card_price{
-    margin-bottom: var(--space-medium);
-    font-size: 40px;
-    color: var(--text-color, #212529);
+.card_price {
+  margin-bottom: var(--space-medium);
+  font-size: 40px;
+  color: var(--text-color, #212529);
 }
 
 .card_price_duration {
-    color: #a2a2a3;
-    font-size: var(--space-medium);
-    vertical-align: -10%;
-    font-size: 27px;
-
+  color: #a2a2a3;
+  font-size: var(--space-medium);
+  vertical-align: -10%;
+  font-size: 27px;
 }
 
 .card_description {
-    margin-bottom: var(--space-medium);
-    list-style-type: circle;
-    list-style-position: inside;
-    list-style-image: linear-gradient(to bottom , blue, yellow);
+  margin-bottom: var(--space-medium);
+  list-style-type: circle;
+  list-style-position: inside;
+  list-style-image: linear-gradient(
+    to bottom,
+    blue,
+    yellow
+  );
 }
 
 .card_description_item {
-    color: var(--text-color, #212529);
-    display: list-item ;
-    
+  color: var(--text-color, #212529);
+  display: list-item;
 }
 
 .card_description_item:not(:last-of-type) {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .card_button {
-    display: block;
-    width: 100%;
-    font-size: 19px;
-    padding: 9px;
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  padding: 9px;
 }
 
 .page_block_hero {
-margin-bottom: 80px;
-border: 3px dotted var(--text-color, #212529);
-border-radius: 3%;
+  margin-bottom: 80px;
+  border: 3px dotted var(--text-color, #212529);
+  border-radius: 3%;
 }
 
-h1{
-    text-shadow: 2px 2px 5px var(--text-color, #212529);
-    
-
+h1 {
+  text-shadow: 2px 2px 5px var(--text-color, #212529);
 }
 
 p {
-    white-space: inherit;
+  white-space: inherit;
 }
 
 .overflow {
-    overflow-wrap: break-word;
-    word-break: break-all;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .page {
-    
-    background-repeat: round;
+  background-repeat: round;
 }
 
 body {
-    background: transparent; 
+  background: transparent;
 }
 
 .page_content {
-    background: transparent;
+  background: transparent;
 }
 
 .table tr {
-    border: 1px solid var(--text-color, #212529);
+  border: 1px solid var(--text-color, #212529);
 }
 
 .table td {
-    border: 1px solid var(--text-color, #212529);
-    border-bottom-color: #4e7fe2;
-    border-right-color: red;
-    }
+  border: 1px solid var(--text-color, #212529);
+  border-bottom-color: #4e7fe2;
+  border-right-color: red;
+}
 
 .table {
-    table-layout: auto;
-    width: 200px;
-    caption-side: top;
-    border-spacing: 12px;
-    border-collapse: unset;
-    empty-cells: hide;
-    opacity: 60%;
+  table-layout: auto;
+  width: 200px;
+  caption-side: top;
+  border-spacing: 12px;
+  border-collapse: unset;
+  empty-cells: hide;
+  opacity: 60%;
 }
 
 .calc {
-    width: 600px;
-    margin: 0;
-    margin-left: calc(50% - (600px / 2));
+  width: 600px;
+  margin: 0;
+  margin-left: calc(50% - (600px / 2));
 }

@@ -1,352 +1,217 @@
-:root {
-    --space-m: 12px;
-    --space-xm: 16px;
-    --space-l: 24px;
-    --space-b: 36px;
-
-    --size-s: 14px;
-    --size-d: 16px;
-    --size-l: 20px;
-
-    --color-border: #cecfd0; 
-    --color-title: #5A5A5A;
-}
-
-/*************************************/
-
-.page{
-    background: #ffffff;
-    padding: 0 15px;
-    line-height: 1.5; 
-}
-
-.main {
-    display: flex;
-    width: 100%;
-    
-    align-items: center;
-    gap: 24px;
-}
-
-.page_content {
-    max-width: 1000px;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 80px;
-    background: #fff;
-
-    margin: 0 auto;
-}
-
-/*************************************/
-
-.header{
-    padding: var(--space-l) 0;
-    border-bottom: 1px solid var(--color-border) ;
-    
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.logo{
-    font-size: 18px;
-    background-color:  #6c757d;
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    width: fit-content;
-    height: fit-content;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-.nav {
-    display: flex;
-}
-
-.nav_link {
-    color: #6c757d;
-    font-size: var(--size-d);
-    text-decoration: none;
-    line-height: 150%;
-    gap: var(--space-xm);
-}
-
-.nav_link:hover {
-    text-decoration: underline;
-}
-
-.nav_inline {
-    gap: var(--space-l);
-}
-
-.nav_vertical {
-    gap: var(--space-m);
-    flex-direction: column;
-}
-
-
-
-.footer {
-    padding: var(--space-medium) 0;
-    border-top: 1px solid var(--color-border);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
-    padding-top: var(--space-l);
-}
-
-.footer_copyright {
-    font-size: 13px;
-    color: #6c757d;
-
-    display: block;
-
-    margin-top: var(--space-m);
-}
-
-.footer_title {
-    font-size: var(--size-l);
-    color: var(--color-title);
-
-    display: block;
-
-    margin-bottom: var(--space-l);
-}
-
-
+@import '/css/var.css';
 
 .form {
-    width: 100%;
-    max-width: 340px;
+  width: 100%;
+  max-width: 340px;
 
-    background-color: white;
-    border-radius: 12px;
+  background-color: white;
+  border-radius: 12px;
 
-    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
 
-    padding: var(--space-l);
+  padding: var(--space-l);
 
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-l);
-    
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
 }
 
 .form_title {
-    text-align: center;
-    font-size: var(--space-l);
-    font-weight: 400;
-    color: var(--color-title);
+  text-align: center;
+  font-size: var(--space-l);
+  font-weight: 400;
+  color: var(--color-title);
 }
 
 .form_info {
-    text-align: center;
-    font-size: var(--size-d);
-    font-weight: 400;
-    color: #6c757d;
-
+  text-align: center;
+  font-size: var(--size-d);
+  font-weight: 400;
+  color: #6c757d;
 }
 
 .form_button {
-    text-align: center;
-    background-color: #6c757d;
-    color: white;
-    padding: 12px;
-    border-radius: 4px;
-    transition: opacity 0.7s;
+  text-align: center;
+  background-color: #6c757d;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  transition: opacity 0.7s;
 }
 
 .form_button:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .form_button:active {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .form_input_list {
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
 
 .form_input {
-    padding: 16px;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
 }
 
 .form_input::placeholder {
-    color: #212529;
+  color: #212529;
 }
 
 .form_checkbox {
-    display: flex;
-    gap: 8px;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .form_checkbox > input {
-   
-
-    display: none;
+  display: none;
 }
 
-
-
 .form_checkbox > input ~ div {
-    border: 1px solid #6c757d;
-    border-radius: 4px;
-    height: 13px;
-    width: 13px;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  height: 13px;
+  width: 13px;
 }
 
 .form_checkbox > input:checked ~ div {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .form_label {
-    font-size: 16px;
-    font-weight: 400px;
-    cursor: pointer;
+  font-size: 16px;
+  font-weight: 400px;
+  cursor: pointer;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: var(--space-l);
+  gap: var(--space-l);
 }
 
 .info_title {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 120%;
-    width: 100%;
-    max-width: 582px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+  width: 100%;
+  max-width: 582px;
 }
 
 .info_description {
-    font-size: 24px;
-    line-height: 36px;
-    max-width: 412px;
-    width: 100%;
+  font-size: 24px;
+  line-height: 36px;
+  max-width: 412px;
+  width: 100%;
 }
 
 .updates {
-    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    background-color: #fff;
-    gap: 24px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  background-color: #fff;
+  gap: 24px;
 }
 
 .updates_title {
-    font-size: 24px;
-    font-weight: 400;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-border);
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0;
 }
 
 .list_block {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .list_img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .media {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
 }
 
 .list_nickname {
-    color: #6c757d;
-    margin-bottom: 12px;
-    font-size: 16px;
-    font-weight: 700;
+  color: #6c757d;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .list_description {
-    color: #6c757d;
-    font-size: 16px;
+  color: #6c757d;
+  font-size: 16px;
 }
 
 .feedback {
-    padding: 16px;
-    background-color: #212529;
-    border-radius: 12px;
+  padding: 16px;
+  background-color: #212529;
+  border-radius: 12px;
 }
 
 .feedback_block {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .feedback_name {
-    font-size: 20px;
-    color: white;
-    padding-bottom: 8px;
-    line-height: 26px;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 8px;
+  line-height: 26px;
 }
 
 .feedback_details {
-    color: #b1b1b1;
-    line-height: 22px;
+  color: #b1b1b1;
+  line-height: 22px;
 }
 
 .expirience_title {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 120%;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .expirience {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px;
-    position: relative;
-    background: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  position: relative;
+  background: #f8f9fa;
 }
 
 .expirience_badge {
-    background-color: #FF7347;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: rotate(30deg);
-    padding: 12px 24px;
-    border-radius: 70px;
-    font-size: 24px;
-    color: white;
-    font-weight: 700;
+  background-color: #ff7347;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(30deg);
+  padding: 12px 24px;
+  border-radius: 70px;
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
 }
