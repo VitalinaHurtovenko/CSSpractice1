@@ -1,3 +1,5 @@
+@layer component, variant;
+
 @font-face {
   font-family: 'HelveticaNeueBold';
   src: url(/fonts/HelveticaNeueBold.ttf);
@@ -10,6 +12,9 @@
 
 :root {
   --color-white: #ffffff;
+  --color-black: #000;
+  --color-primary: #611f69;
+  --color-light: #f4ede4;
 
   --page-width-big: 1260px;
   --page-width-medium: 1000px;
@@ -24,6 +29,16 @@
   --spacing-7: 28px;
   --spacing-8: 32px;
   --spacing-9: 36px;
+
+  --f-size-1: 14px;
+  --f-size-2: 18px;
+  --f-size-3: 22px;
+
+  --radius-1: 4px;
+
+  --opacity-1: 0.7;
+  --opacity-2: 0.3;
+  --transition-1: 0.7s;
 }
 
 .page {
@@ -35,10 +50,13 @@
   justify-content: center;
 }
 
-.page_content {
-  width: 100%;
+@layer component {
+  .page_content {
+    width: 100%;
+    gap: 24px;
 
-  padding: var(--spacing-3);
+    padding: var(--spacing-3);
+  }
 }
 
 @media all and (1260px <= width) {
@@ -60,15 +78,52 @@
 }
 
 .hero_section {
-  display: grid;
-  gap: 35;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 50px;
+
+  height: 60vh;
+
+  min-height: 620px;
 }
 
 .hero {
-  display: grid;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.hero_content {
+  display: flex;
+  flex-direction: column;
   max-width: 425px;
-  gap: var(--spacing-4);
+  height: 100%;
+  max-height: 300px;
+  position: relative;
+}
+
+.hero_label {
+  font-size: var(--f-size-1);
+}
+
+.hero_title {
+  font-size: 50px;
+  margin: 28px 0;
+}
+
+.hero_info {
+  font-size: var(--f-size-2);
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.hero_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: var(--spacing-5);
 }
 
 .brands {
@@ -82,5 +137,54 @@
 
 .hero_image {
   position: absolute;
-  display: none;
+  left: 580px;
+  top: 0;
+}
+
+@layer component {
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--spacing-3);
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: opacity var(--transition-1);
+  }
+
+  .button:hover {
+    opacity: var(--opacity-1);
+    cursor: pointer;
+  }
+
+  .button:active {
+    opacity: var(--opacity-2);
+  }
+}
+
+@layer variant {
+  .button_primary {
+    color: var(--color-white);
+    background: var(--color-primary);
+  }
+  .button_secondary {
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    border-width: 2px;
+  }
+}
+
+.features_section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+@layer variant {
+  .page_section_light {
+    background-color: var(--color-light);
+  }
 }
