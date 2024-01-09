@@ -4,6 +4,12 @@ const express = require('express')
 // Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
 const router = express.Router()
 
+router.get('/slack', function (req, res) {
+  res.render('slack', {
+    layout: null,
+  })
+})
+
 router.get('/template-1', function (req, res) {
   // res.render генерує нам HTML сторінку
 
