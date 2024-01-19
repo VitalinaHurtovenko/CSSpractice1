@@ -10,6 +10,12 @@ router.get('/slack', function (req, res) {
   })
 })
 
+router.get('/dashboard', function (req, res) {
+  res.render('dashboard', {
+    layout: null,
+  })
+})
+
 router.get('/template-1', function (req, res) {
   // res.render генерує нам HTML сторінку
 
